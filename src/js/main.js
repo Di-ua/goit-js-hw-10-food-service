@@ -1,4 +1,6 @@
-import menu from './menu.json';
+import menu from '../menu.json';
+import theme from './theme.js';
+
 
 
 const Theme = {
