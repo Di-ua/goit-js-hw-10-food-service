@@ -1,5 +1,9 @@
 const inputRef = document.querySelector('.theme-switch__toggle');
 
+const theme = {
+    LIGHT: 'light-theme',
+    DARK: 'dark-theme',
+};
 const themeChoice = function () { 
 if (localStorage.getItem("theme") === "light-theme" || !(localStorage.getItem("theme"))){
     document.body.classList.remove('dark-theme');
@@ -17,5 +21,6 @@ themeChoice();
 
 inputRef.addEventListener('input', e => {
     e.target.checked ? localStorage.setItem("theme", "dark-theme") : localStorage.setItem("theme", "light-theme");
-    onChoice();
+    themeChoice();
 });
+

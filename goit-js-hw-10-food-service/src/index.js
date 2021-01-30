@@ -1,7 +1,7 @@
 import './css/styles.css';
 import itemsTemplate from './templates/menu-items.hbs';
 import menu from './data/menu.json';
-import theme from './js/theme';
+import  './js/themes';
 
 const refs = {
     body: document.querySelector('body'),
@@ -10,7 +10,8 @@ const refs = {
 
 const markup = itemsTemplate(menu);
 
-// Рендерим разметку
+
+// Рендерю разметку
 refs.menuItems.insertAdjacentHTML('beforeend', markup);
 
 refs.body.classList.add(localStorage.theme);
