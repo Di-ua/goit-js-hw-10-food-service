@@ -9,3 +9,9 @@ const refs = {
 }
 
 const markup = itemsTemplate(menu);
+
+// Рендерим разметку
+refs.menuItems.insertAdjacentHTML('beforeend', markup);
+
+refs.body.classList.add(localStorage.theme);
+themeChoice();
